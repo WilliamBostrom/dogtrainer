@@ -53,7 +53,7 @@ buttons.forEach((button) => {
     </button>
   </div>
   <div>
-    <button class="progress1 back-btn">← Tillbaka</button>
+  
     <button class="progress1 disabled-btn2 ">Nästa</button>
   </div>`;
 
@@ -74,7 +74,7 @@ buttons.forEach((button) => {
             progressSpan.style.width = "60%";
 
             if (value === "snacks") {
-              img.style.transform = "rotate(1050deg)";
+              setTimeout(welcomeHome, 1000);
             }
 
             button.disabled = true;
@@ -97,12 +97,12 @@ buttons.forEach((button) => {
     <button id="snacks" class="progress-btn3 btn-margin-r" value="snacks">
       Hundgodis
     </button>
-    <button id="walks" class="progress-btn3" value="all">
+    <button id="food" class="progress-btn3" value="all">
       Vanlig mat
     </button>
   </div>
   <div>
-    <button class="progress1 back-btn">← Tillbaka</button>
+    
     <button class="progress1 disabled-btn3 ">Nästa</button>
   </div>`;
 
@@ -137,10 +137,53 @@ buttons.forEach((button) => {
                     lastClickedButton = button;
 
                     if (value === "snacks" || "all") {
+                      setTimeout(welcomeHome, 1000);
                       nextbutton.classList.remove("disabled-btn");
                       nextbutton.addEventListener("click", () => {
-                        // Handle the next button click (e.g., display results or proceed to the next step)
-                        console.log("Selected values:", selectedValues);
+                        nextButton.classList.add("active");
+
+                        let html = "";
+                        html += `<h2>Varför vill du bli min vän?</h2>
+                  <div>
+                    <textarea rows="4" id="motivation" value="motivation"> Har alltid velat men inte vågat ansöka förens nu...
+                    </textarea>
+        
+                  </div>
+                  <div>
+                    
+                    <button class="progress1 disabled-btn4 ">Nästa</button>
+                  </div>`;
+
+                        let nextSlide = document.getElementById("new");
+                        nextSlide.innerHTML = html;
+
+                        const nextbutton3 =
+                          document.querySelector(".disabled-btn4");
+                        nextbutton3.addEventListener("click", function () {
+                          const textArea =
+                            document.getElementById("motivation");
+                          const textAreavalue = textArea.innerHTML;
+                          selectedValues.push(textAreavalue);
+                          setTimeout(welcomeHome, 3000);
+
+                          let html = "";
+                          html += `<h2>Tack för din ansökan, voff!</h2>
+                  <div>
+                    <h3 class="h2" > Just nu är vänlistan full...
+                    </h3>
+                    <div class="center">
+                          <p class="contact-me">Kontakta mig på instagram ifall du vill skicka snacks</p>
+                          <a target="_blank" href="https://www.instagram.com/lokethestaffy/"> <img src="images/instagram.svg" alt="instagram" class="moveInBottom" /></a>
+                 </div>
+                          </div>
+                 `;
+
+                          let nextSlide = document.getElementById("new");
+                          nextSlide.innerHTML = html;
+
+                          progressSpan.style.width = "100%";
+                          progressSpan.style.borderRadius = "50px";
+                        });
                       });
                     }
                   });
@@ -154,4 +197,21 @@ buttons.forEach((button) => {
       });
     }
   });
+});
+
+const nextbutton3 = document.querySelector(".disabled-btn4");
+nextbutton3.addEventListener("click", function () {
+  let html = "";
+  html += `<h2>Tack för din ansökan!</h2>
+                  <div>
+                    <h2>Just nu är det många som ansöker, ifall du vill nå mig så är det smidigast att skriva på instagram. </h2>
+        
+                  </div>
+                  <div>
+                    
+                    <button class="progress1 disabled-btn4 ">Nästa</button>
+                  </div>`;
+
+  let nextSlide = document.getElementById("new");
+  nextSlide.innerHTML = html;
 });

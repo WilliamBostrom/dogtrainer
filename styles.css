@@ -251,3 +251,24 @@ header {
     opacity: 1;
   }
 }
+
+textarea {
+  width: 300px;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: left;
+  color: black;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-me {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #000080;
+}
