@@ -75,6 +75,7 @@ buttons.forEach((button) => {
 
             if (value === "snacks") {
               setTimeout(welcomeHome, 1000);
+              img.style.transform = "rotate(1050deg)";
             }
 
             button.disabled = true;
@@ -123,8 +124,12 @@ buttons.forEach((button) => {
                     console.log(selectedValues);
                     progressSpan.style.width = "90%";
 
-                    if (value === "all") {
+                    if (value === "snacks") {
+                      setTimeout(welcomeHome, 1000);
                       img.style.transform = "rotate(1050deg)";
+                    } else {
+                      setTimeout(welcomeHome, 1000);
+                      img.style.transform = "rotate(-1110deg)";
                     }
 
                     button.disabled = true;
