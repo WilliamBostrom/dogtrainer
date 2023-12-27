@@ -87,7 +87,7 @@ body {
   }
 
   .header_js {
-    display: none;
+    background-size: 0%;
   }
 }
 
