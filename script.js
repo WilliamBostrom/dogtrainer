@@ -11,6 +11,33 @@ const welcomeHome = () => {
 
 setTimeout(welcomeHome, 3000);
 
+const startPage = function () {
+  let html = "";
+  html += `  <h2>Vad kan du hjälpa dig med?</h2>
+  <div>
+    <button id="walk" class="progress-btn btn-margin-r" value="walk">
+      Gå promenad
+    </button>
+    <button id="pet" class="progress-btn" value="pet">
+      Klappa mig
+    </button>
+  </div>
+  <div>
+    <button id="food" class="progress-btn btn-margin-r" value="food">
+      Ge mig snacks
+    </button>
+    <button id="all" class="progress-btn" value="all">
+      Alla samtidigt
+    </button>
+  </div>
+  <button class="progress1 disabled-btn">Nästa</button>`;
+
+  let nextSlide = document.getElementById("new");
+  nextSlide.innerHTML = html;
+};
+
+startPage();
+
 // Fixa knapparna till vän-anmälan
 
 const progressSpan = document.querySelector(".progress span");
