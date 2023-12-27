@@ -83,7 +83,7 @@ body {
   .progress1,
   .progress-btn2,
   .progress-btn3 {
-    width: 14rem;
+    min-width: 14rem;
   }
 }
 
