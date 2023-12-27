@@ -93,9 +93,9 @@ buttons.forEach((button) => {
               // tredje sidan frågor
               nextbutton2.addEventListener("click", () => {
                 let html = "";
-                html += `<h2>Ge hundgodis eller vanlig mat?</h2>
+                html += `<h2>Hundgodis eller vanlig mat?</h2>
   <div>
-    <button id="snacks" class="progress-btn3 btn-margin-r" value="snacks">
+    <button id="snacks" class="progress-btn3 btn-margin-r" value="snack">
       Hundgodis
     </button>
     <button id="food" class="progress-btn3" value="all">
@@ -124,7 +124,7 @@ buttons.forEach((button) => {
                     console.log(selectedValues);
                     progressSpan.style.width = "90%";
 
-                    if (value === "snacks") {
+                    if (value === "snack") {
                       setTimeout(welcomeHome, 1000);
                       img.style.transform = "rotate(1050deg)";
                     } else {
