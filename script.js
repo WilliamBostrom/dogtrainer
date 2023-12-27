@@ -44,7 +44,8 @@ buttons.forEach((button) => {
     }
   });
 });
-// ... previous code ...
+
+// Andra sidan frågor
 
 nextButton.addEventListener("click", function () {
   nextButton.classList.add("active");
@@ -95,8 +96,64 @@ nextButton.addEventListener("click", function () {
 
       if (value === "promenader" || "snacks") {
         nextbutton2.classList.remove("disabled-btn");
+
+        // tredje sidan frågor
         nextbutton2.addEventListener("click", () => {
-          // Handle the next button click (e.g., display results or proceed to the next step)
+          let html = "";
+          html += `<h2>Ge hundgodis eller vanlig mat?</h2>
+  <div>
+    <button id="snacks" class="progress-btn3 btn-margin-r" value="snacks">
+      Hundgodis
+    </button>
+    <button id="walks" class="progress-btn3" value="all">
+      Vanlig mat
+    </button>
+  </div>
+  <div>
+    <button class="progress1 back-btn">← Tillbaka</button>
+    <button class="progress1 disabled-btn3 ">Nästa</button>
+  </div>`;
+
+          let nextSlide = document.getElementById("new");
+          nextSlide.innerHTML = html;
+
+          const buttons3 = document.querySelectorAll(".progress-btn3");
+          const nextbutton = document.querySelector(".disabled-btn3");
+          const img = document.querySelector(".cover");
+          nextbutton.classList.add("disabled-btn");
+
+          /*  nextbutton2.classList.remove("disabled-btn2"); */
+          buttons3.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              e.preventDefault();
+              const value = button.value;
+              selectedValues.push(value);
+              console.log(selectedValues);
+              progressSpan.style.width = "90%";
+
+              if (value === "all") {
+                img.style.transform = "rotate(1050deg)";
+              }
+
+              button.disabled = true;
+
+              if (lastClickedButton) {
+                lastClickedButton.classList.remove("active");
+              }
+
+              button.classList.add("active");
+              lastClickedButton = button;
+
+              if (value === "snacks" || "all") {
+                nextbutton.classList.remove("disabled-btn");
+                nextbutton.addEventListener("click", () => {
+                  // Handle the next button click (e.g., display results or proceed to the next step)
+                  console.log("Selected values:", selectedValues);
+                });
+              }
+            });
+          });
+
           console.log("Selected values:", selectedValues);
         });
       }
