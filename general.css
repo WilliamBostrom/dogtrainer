@@ -78,6 +78,13 @@ body {
   .h3 {
     padding-left: 1rem;
   }
+
+  .progress-btn,
+  .progress1,
+  .progress-btn2,
+  .progress-btn3 {
+    width: 14rem;
+  }
 }
 
 @media (min-width: 1040px) {
