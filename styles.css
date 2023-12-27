@@ -1,0 +1,252 @@
+nav {
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 3.2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  height: 8rem;
+  list-style: none;
+  align-items: center;
+}
+
+ul li {
+  margin-right: 2.4rem;
+  font-size: 2.1rem;
+}
+
+header {
+  padding-top: 2.2rem;
+  height: 51rem;
+  color: #000080;
+}
+
+.h1,
+.h2,
+.h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: 7.6rem;
+}
+
+.h2 {
+  font-size: 2.4rem;
+}
+
+.h3 {
+  font-size: 2.2rem;
+}
+
+.cover {
+  transform: rotate(-18deg);
+  z-index: 2;
+  width: 50rem;
+  margin-top: 50px;
+}
+
+.header__img {
+  /*  width: 45rem; */
+  margin-right: 5rem;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header_js {
+  background-image: url("images/voff-welcome.png");
+  background-repeat: no-repeat;
+  overflow: visible;
+  background-size: 25%;
+  z-index: 3;
+  background-position: 100% 0%;
+}
+.header__img::before {
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background-color: #000080;
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header__text {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header_questions {
+  padding: 2rem;
+  height: 30rem;
+}
+
+.header_questions_btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.header_questions_btn h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px 0px 32px;
+  font-size: 2.16rem;
+}
+
+.progress {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 0px 8px;
+  background: rgb(255 255 255);
+  height: 26px;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin-bottom: 3.2rem;
+  position: relative;
+}
+
+.progress span {
+  content: "";
+  position: absolute;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  left: 0;
+  height: 25px;
+  width: 10%;
+  background-color: blue;
+}
+
+.progress-btn,
+.progress1,
+.progress-btn2,
+.progress-btn3 {
+  margin: 0px;
+  font-size: 14.4px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background: rgb(255, 255, 255);
+  font-family: inherit;
+  line-height: 20px;
+  color: rgb(68, 68, 68);
+  /*  padding: 8px 12px; */
+  min-width: 17rem;
+  height: 4rem;
+  letter-spacing: 1px;
+  appearance: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+.progress-btn:focus,
+.prgress-btn:active {
+  background-color: blue;
+}
+
+.active {
+  background-color: blue;
+  color: #fff;
+}
+
+.btn-margin-r {
+  margin-right: 1rem;
+}
+
+.disabled-btn {
+  cursor: default;
+  background: rgb(230, 230, 230);
+  border-color: rgb(230, 230, 230);
+  color: rgb(170, 170, 170);
+  opacity: 0.6;
+}
+
+.move-right {
+  justify-self: flex-end;
+  animation: moveInLeft 1s ease-out;
+}
+.move-left {
+  animation: moveInRight 1s ease-out;
+}
+.fadeIn {
+  animation: fadeIn 2s ease-in;
+}
+.moveInBottom {
+  /*  animation: moveInBottom 2s ease-in; */
+  animation: moveInBottom 1.5s ease-out 1.25s;
+  animation-fill-mode: backwards;
+}
+
+/* Animationer */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(25rem);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

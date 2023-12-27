@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="general.css" />
+    <script src="script.js" defer></script>
+    <title>Personal dog example</title>
+    <style>
+      /* Your existing CSS styles for progress and buttons */
+
+      .disabled-btn {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav container">
+        <h3 class="h3">
+          Team <br />
+          Loke
+        </h3>
+        <ul>
+          <li>Mina kompisar</li>
+          <li>Bra snacks</li>
+          <li>Bli en kompis</li>
+        </ul>
+      </div>
+    </nav>
+    <header class="container grid-col-2">
+      <div class="header__img move-right">
+        <img src="images/hero.png" alt="" class="cover moveInBottom" />
+      </div>
+
+      <div class="header__text fadeIn">
+        <h1 class="h1 header__text_box">Team Loke</h1>
+        <h2 class="h2 header__text_box">Duktig hund online</h2>
+        <div class="headerbuttons"></div>
+        <div class="header_questions">
+          <div class="progress"><span></span></div>
+          <div class="header_questions_btn" id="new">
+            <h2>Vad kan du hjälpa dig med?</h2>
+            <div>
+              <button id="walk" class="progress-btn btn-margin-r" value="walk">
+                Gå promenad
+              </button>
+              <button id="pet" class="progress-btn" value="pet">
+                Klappa mig
+              </button>
+            </div>
+            <div>
+              <button id="food" class="progress-btn btn-margin-r" value="food">
+                Ge mig snacks
+              </button>
+              <button id="all" class="progress-btn" value="all">
+                Alla samtidigt
+              </button>
+            </div>
+            <button class="progress1 disabled-btn">Nästa</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+  </body>
+</html>
