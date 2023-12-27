@@ -48,10 +48,11 @@ header {
 }
 
 .cover {
-  transform: rotate(-18deg);
+  transform: rotate(-48deg);
   z-index: 2;
   width: 50rem;
   margin-top: 50px;
+  transition: all 4s;
 }
 
 .header__img {
